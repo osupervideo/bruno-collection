@@ -1,0 +1,15 @@
+meta {
+  name: List CRM Contacts
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/api/v1/contacts?limit=15
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}

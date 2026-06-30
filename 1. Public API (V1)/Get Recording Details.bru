@@ -1,0 +1,15 @@
+meta {
+  name: Get Recording Details
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/v1/recordings/{{recordingId}}
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}

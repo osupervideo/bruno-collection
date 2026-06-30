@@ -1,0 +1,15 @@
+meta {
+  name: List Schedules
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/api/v1/schedules?status=scheduled&limit=10
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}

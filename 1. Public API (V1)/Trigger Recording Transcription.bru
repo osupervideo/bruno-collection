@@ -1,0 +1,15 @@
+meta {
+  name: Trigger Recording Transcription
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/v1/recordings/{{recordingId}}/transcription
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}

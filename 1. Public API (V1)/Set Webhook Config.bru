@@ -1,0 +1,22 @@
+meta {
+  name: Set Webhook Config
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/api/v1/webhook-config
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "defaultUrl": "https://webhook.site/test-integration"
+  }
+}

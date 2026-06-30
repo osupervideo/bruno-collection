@@ -1,0 +1,22 @@
+meta {
+  name: Invalid Request Body
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/v1/rooms
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "title": ""
+  }
+}

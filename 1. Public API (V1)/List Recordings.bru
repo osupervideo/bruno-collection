@@ -1,0 +1,19 @@
+meta {
+  name: List Recordings
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/recordings?externalReferenceId=pedido-12345&limit=20
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}
+
+vars:post-response {
+  recordingId: res.body.recordings[0] ? res.body.recordings[0].id : null
+}

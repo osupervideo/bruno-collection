@@ -1,0 +1,30 @@
+meta {
+  name: Create Room
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/rooms
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+  Idempotency-Key: teste-001
+}
+
+body:json {
+  {
+    "title": "Reunião de Teste Bruno",
+    "autoRecord": true,
+    "recordingMode": "video",
+    "externalReferenceId": "pedido-12345"
+  }
+}
+
+vars:post-response {
+  roomId: res.body.room.id
+}

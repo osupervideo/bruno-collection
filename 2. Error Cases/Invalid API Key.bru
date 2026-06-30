@@ -1,0 +1,15 @@
+meta {
+  name: Invalid API Key
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/rooms/qualquer
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: sv_test_chave_invalida
+}

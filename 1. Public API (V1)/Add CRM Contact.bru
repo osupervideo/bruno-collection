@@ -1,0 +1,24 @@
+meta {
+  name: Add CRM Contact
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{baseUrl}}/api/v1/contacts
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Felipe Albuquerque Bruno",
+    "email": "felipe.albuquerque.bruno@provedor.com",
+    "phone": "+5521977778888"
+  }
+}

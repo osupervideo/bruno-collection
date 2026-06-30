@@ -1,0 +1,22 @@
+meta {
+  name: Admit Guest
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/api/v1/rooms/{{roomId}}/admit
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "guestSocketId": "SUBSTITUA_PELO_guestSocketId_DO_WEBHOOK"
+  }
+}

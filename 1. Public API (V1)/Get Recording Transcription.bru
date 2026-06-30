@@ -1,0 +1,15 @@
+meta {
+  name: Get Recording Transcription
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/api/v1/recordings/{{recordingId}}/transcription
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}

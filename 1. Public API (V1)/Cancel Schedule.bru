@@ -1,0 +1,15 @@
+meta {
+  name: Cancel Schedule
+  type: http
+  seq: 18
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/schedules/{{scheduleId}}?sendCancelEmail=true
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}

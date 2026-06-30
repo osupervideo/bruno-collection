@@ -1,0 +1,15 @@
+meta {
+  name: End Room
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/v1/rooms/{{roomId}}/end
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+}
