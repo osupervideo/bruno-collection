@@ -1,0 +1,22 @@
+meta {
+  name: Delete Operator
+  type: http
+  seq: 24
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/operators
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "joana.silva@empresa.com"
+  }
+}

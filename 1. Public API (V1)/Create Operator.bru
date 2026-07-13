@@ -1,0 +1,24 @@
+meta {
+  name: Create Operator
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{baseUrl}}/api/v1/operators
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: {{apiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "joana.silva@empresa.com",
+    "password": "SenhaForte123",
+    "name": "Joana Silva"
+  }
+}
